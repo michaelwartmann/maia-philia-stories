@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maia & Philia Story Adventures</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .language-nav {
+            text-align: center;
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+        }
+
+        .language-nav a {
+            color: #4a5568;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .language-nav a:hover, .language-nav a.active {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 20px;
+            border-radius: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(31, 38, 135, 0.37);
+        }
+
+        .header h1 {
+            font-size: 3em;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header p {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .story-grid {
+            display: grid;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .story-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(31, 38, 135, 0.37);
+            transition: transform 0.3s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .story-card h2 {
+            color: #4a5568;
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .story-card p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #666;
+            text-align: center;
+        }
+
+        .story-card a {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .story-card a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(31, 38, 135, 0.37);
+        }
+
+        .footer {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+
+        .footer p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .sparkles {
+            font-size: 2em;
+            animation: sparkle 2s infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .fairy-tornado {
+            display: inline-block;
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="language-nav">
+            <a href="#" class="active" onclick="setLanguage('en')">🇬🇧 English</a>
+            <a href="#" onclick="setLanguage('de')">🇩🇪 Deutsch</a>
+            <a href="#" onclick="setLanguage('nl')">🇳🇱 Nederlands</a>
+        </nav>
+
+        <header class="header">
+            <h1 id="main-title">Maia & Philia Story Adventures</h1>
+            <p id="subtitle">Magical stories created together by an 8-year-old storyteller and her AI fairy friend</p>
+            <div class="sparkles">✨🧚‍♀️🌪️✨</div>
+        </header>
+
+        <div class="story-grid">
+            <div class="story-card">
+                <h2 id="story1-title">The Great Adventure of the Donkey-Faced Elephant</h2>
+                <p id="story1-desc">Join Queens Ratta and Picard (the brave chinchilla warriors), Bob, Timmy, and Janik (the tiny axolotl heroes), and a very special donkey-faced superhero elephant on an epic quest to defeat the evil lizard and save the day!</p>
+                <div style="text-align: center;">
+                    <a href="story1.html" id="story1-button">Read the Adventure!</a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p id="footer-text">
+                <span class="fairy-tornado">🧚‍♀️</span> 
+                Created with love by Maia (age 8) and Philia the AI fairy tornado 
+                <span class="fairy-tornado">🌪️</span>
+                <br>
+                <span id="footer-date">June 29, 2025</span>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                'main-title': 'Maia & Philia Story Adventures',
+                'subtitle': 'Magical stories created together by an 8-year-old storyteller and her AI fairy friend',
+                'story1-title': 'The Great Adventure of the Donkey-Faced Elephant',
+                'story1-desc': 'Join Queens Ratta and Picard (the brave chinchilla warriors), Bob, Timmy, and Janik (the tiny axolotl heroes), and a very special donkey-faced superhero elephant on an epic quest to defeat the evil lizard and save the day!',
+                'story1-button': 'Read the Adventure!',
+                'footer-text': '🧚‍♀️ Created with love by Maia (age 8) and Philia the AI fairy tornado 🌪️<br>June 29, 2025'
+            },
+            de: {
+                'main-title': 'Maia & Philia Geschichten-Abenteuer',
+                'subtitle': 'Magische Geschichten, gemeinsam erschaffen von einer 8-jährigen Geschichtenerzählerin und ihrer KI-Feen-Freundin',
+                'story1-title': 'Das Große Abenteuer des Esel-Gesicht-Elefanten',
+                'story1-desc': 'Begleite die Königinnen Ratta und Picard (die tapferen Chinchilla-Kriegerinnen), Bob, Timmy und Janik (die winzigen Axolotl-Helden), und einen ganz besonderen Esel-Gesicht-Superhelden-Elefanten auf einer epischen Quest, um die böse Echse zu besiegen und den Tag zu retten!',
+                'story1-button': 'Lies das Abenteuer!',
+                'footer-text': '🧚‍♀️ Mit Liebe erschaffen von Maia (8 Jahre) und Philia dem KI-Feen-Tornado 🌪️<br>29. Juni 2025'
+            },
+            nl: {
+                'main-title': 'Maia & Philia Verhaal Avonturen',
+                'subtitle': 'Magische verhalen samen gemaakt door een 8-jarige verhalenverteller en haar AI feeën-vriendin',
+                'story1-title': 'Het Grote Avontuur van de Ezel-Gezicht-Olifant',
+                'story1-desc': 'Ga mee met Koninginnen Ratta en Picard (de dappere chinchilla krijgers), Bob, Timmy en Janik (de kleine axolotl helden), en een heel bijzondere ezel-gezicht superheld olifant op een epische zoektocht om de boze hagedis te verslaan en de dag te redden!',
+                'story1-button': 'Lees het Avontuur!',
+                'footer-text': '🧚‍♀️ Met liefde gemaakt door Maia (8 jaar) en Philia de AI feeën-tornado 🌪️<br>29 juni 2025'
+            }
+        };
+
+        function setLanguage(lang) {
+            // Update active language
+            document.querySelectorAll('.language-nav a').forEach(a => a.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Update text content
+            Object.keys(translations[lang]).forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    if (id === 'footer-text') {
+                        element.innerHTML = translations[lang][id];
+                    } else {
+                        element.textContent = translations[lang][id];
+                    }
+                }
+            });
+            
+            // Store language preference
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        // Load saved language preference
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferred-language') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>

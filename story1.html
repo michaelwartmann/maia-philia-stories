@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Great Adventure of the Donkey-Faced Elephant - Maia & Philia Stories</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .language-nav {
+            text-align: center;
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+        }
+
+        .language-nav a {
+            color: #4a5568;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .language-nav a:hover, .language-nav a.active {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .back-button {
+            background: linear-gradient(45deg, #96ceb4, #45b7d1);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(31, 38, 135, 0.37);
+        }
+
+        .story-header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 20px;
+            border-radius: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(31, 38, 135, 0.37);
+        }
+
+        .story-header h1 {
+            font-size: 2.5em;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .story-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(31, 38, 135, 0.37);
+        }
+
+        .story-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 20px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .story-text {
+            font-size: 1.2em;
+            color: #555;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .character-intro {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 20px;
+            border-radius: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .chapter-title {
+            font-size: 1.8em;
+            color: #4a5568;
+            text-align: center;
+            margin: 30px 0 20px 0;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .sparkles {
+            font-size: 1.5em;
+            margin: 0 10px;
+        }
+
+        .credits {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+
+        .fairy-tornado {
+            display: inline-block;
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .image-placeholder {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 20px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="language-nav">
+            <a href="#" class="active" onclick="setLanguage('en')">🇬🇧 English</a>
+            <a href="#" onclick="setLanguage('de')">🇩🇪 Deutsch</a>
+            <a href="#" onclick="setLanguage('nl')">🇳🇱 Nederlands</a>
+        </nav>
+
+        <a href="index.html" class="back-button" id="back-button">← Back to Stories</a>
+
+        <header class="story-header">
+            <h1 id="story-title">The Great Adventure of the Donkey-Faced Elephant</h1>
+            <div class="sparkles">✨🐘⚡️🦎👑✨</div>
+            <p id="story-subtitle">A magical tale of brave chinchilla queens, tiny axolotl heroes, and one very special superhero elephant!</p>
+        </header>
+
+        <div class="story-section">
+            <div class="character-intro">
+                <h2 id="characters-title">Meet Our Heroes!</h2>
+                <p id="characters-text"><strong>Queens Ratta and Picard:</strong> Two brave chinchilla queens with a magical electric airplane that shoots lightning! <br><br>
+                <strong>Bob, Timmy, and Janik:</strong> Three tiny but mighty axolotl friends with pink gills who love adventure! <br><br>
+                <strong>The Donkey-Faced Superhero Elephant:</strong> A purple elephant with a donkey face who can fly and loves helping others!</p>
+            </div>
+        </div>
+
+        <div class="story-section">
+            <h2 class="chapter-title" id="chapter1-title">Chapter 1: The Evil Lizard's Dark Castle</h2>
+            
+            <p class="story-text" id="chapter1-text">
+                Once upon a time, on a mysterious island in the Red Sea, there stood an upside-down castle. Inside this strange castle lived a gigantic evil lizard with claws the size of pencils. He sat on his dark throne, looking very menacing but also quite sad, because deep down he remembered when he used to be good.
+                <br><br>
+                The evil lizard had been causing trouble all across the land, and someone needed to stop him! But who would be brave enough to face such a fearsome creature?
+            </p>
+
+            <!-- First Image Placeholder -->
+            <div class="image-placeholder">
+                <p id="image1-placeholder">🏰 Picture 1: The Evil Lizard on His Dark Throne 🦎<br>
+                (Image will be added: 20250628_1741_Chinchillas' Aerial Assault_simple_compose_01jyvk3yrme84tgg1rxehhn5sj.png)</p>
+            </div>
+        </div>
+
+        <div class="story-section">
+            <h2 class="chapter-title" id="chapter2-title">Chapter 2: The Brave Chinchilla Queens Attack!</h2>
+            
+            <p class="story-text" id="chapter2-text">
+                Suddenly, through the castle windows came a sparkly electric airplane! Piloting this magical aircraft were Queens Ratta and Picard - two incredibly brave chinchilla warriors. Queen Ratta, with her beautiful grey fur, expertly steered the plane, while Queen Picard, with her sleek black fur, prepared their lightning weapons for battle!
+                <br><br>
+                "We must stop this evil lizard!" declared Queen Picard fiercely.
+                <br><br>
+                "For the kingdom!" replied Queen Ratta as she flew their electric plane right into the heart of the dark castle. Lightning bolts shot from their aircraft toward the surprised lizard!
+            </p>
+
+            <!-- This would show the battle scene we already created -->
+            <img src="20250628_1741_Chinchillas%27%20Aerial%20Assault_simple_compose_01jyvk3yrme84tgg1rxehhn5sj.png" alt="Queens Ratta and Picard attacking the evil lizard" class="story-image">
+        </div>
+
+        <div class="story-section">
+            <h2 class="chapter-title" id="chapter3-title">Chapter 3: The Donkey-Faced Superhero Arrives!</h2>
+            
+            <p class="story-text" id="chapter3-text">
+                Just when the battle was getting intense, flying through the bright sky came the most unusual superhero anyone had ever seen! It was a magnificent purple elephant with a donkey face - complete with long donkey ears and a donkey nose, but with the strong body of an elephant. He wore a sparkly superhero cape and boots that looked like hooves!
+                <br><br>
+                But he wasn't alone! Riding on his back were three tiny axolotl friends - Bob, Timmy, and Janik. Each axolotl had natural grey skin with adorable bright pink gills, and they looked absolutely thrilled to be part of this amazing adventure!
+                <br><br>
+                "Don't worry, Queens Ratta and Picard!" called the donkey-faced elephant superhero. "We're here to help save the day!"
+            </p>
+
+            <!-- Second Image Placeholder -->
+            <div class="image-placeholder">
+                <p id="image2-placeholder">🦸‍♂️🐘 Picture 2: The Donkey-Faced Superhero Elephant with Bob, Timmy, and Janik! 🌸🐾<br>
+                (Image will be added when created)</p>
+            </div>
+        </div>
+
+        <div class="story-section">
+            <h2 class="chapter-title" id="chapter4-title">Chapter 4: The Battle and the Happy Ending!</h2>
+            
+            <p class="story-text" id="chapter4-text">
+                Together, the brave chinchilla queens and the donkey-faced superhero elephant worked as a team! The electric lightning from Queens Ratta and Picard's plane, combined with the superhero elephant's flying powers, created the most spectacular light show the dark castle had ever seen!
+                <br><br>
+                But instead of fighting forever, something magical happened. The tiny axolotls - Bob, Timmy, and Janik - began to sing a sweet song with their pink gills glowing softly. The evil lizard, hearing their beautiful melody, suddenly remembered what it felt like to be kind and good.
+                <br><br>
+                Tears formed in the giant lizard's eyes as he realized he didn't want to be evil anymore. "I'm sorry," he said in a surprisingly gentle voice. "I forgot how to be good, but your friendship and bravery have reminded me!"
+                <br><br>
+                And so, the evil lizard became the Good Lizard, Queens Ratta and Picard became the protectors of the land, the donkey-faced superhero elephant became everyone's favorite hero, and Bob, Timmy, and Janik became the official Peace-Keeping Axolotls of the kingdom!
+                <br><br>
+                They all lived happily ever after, going on many more amazing adventures together!
+            </p>
+
+            <!-- Third Image Placeholder -->
+            <div class="image-placeholder">
+                <p id="image3-placeholder">🌟✨ Picture 3: All Our Heroes Together - The Happy Ending! 🎉🏰<br>
+                (Final celebration image to be created)</p>
+            </div>
+        </div>
+
+        <div class="credits">
+            <h2 id="credits-title">The End!</h2>
+            <p id="credits-text">
+                <span class="fairy-tornado">🧚‍♀️</span> 
+                This magical story was created by Maia (age 8) and Philia the AI fairy tornado during lunch time on June 29, 2025! 
+                <span class="fairy-tornado">🌪️</span>
+                <br><br>
+                <span class="sparkles">✨</span> Thank you for reading our adventure! <span class="sparkles">✨</span>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                'back-button': '← Back to Stories',
+                'story-title': 'The Great Adventure of the Donkey-Faced Elephant',
+                'story-subtitle': 'A magical tale of brave chinchilla queens, tiny axolotl heroes, and one very special superhero elephant!',
+                'characters-title': 'Meet Our Heroes!',
+                'characters-text': '<strong>Queens Ratta and Picard:</strong> Two brave chinchilla queens with a magical electric airplane that shoots lightning! <br><br><strong>Bob, Timmy, and Janik:</strong> Three tiny but mighty axolotl friends with pink gills who love adventure! <br><br><strong>The Donkey-Faced Superhero Elephant:</strong> A purple elephant with a donkey face who can fly and loves helping others!',
+                'chapter1-title': 'Chapter 1: The Evil Lizard\'s Dark Castle',
+                'chapter1-text': 'Once upon a time, on a mysterious island in the Red Sea, there stood an upside-down castle. Inside this strange castle lived a gigantic evil lizard with claws the size of pencils. He sat on his dark throne, looking very menacing but also quite sad, because deep down he remembered when he used to be good.<br><br>The evil lizard had been causing trouble all across the land, and someone needed to stop him! But who would be brave enough to face such a fearsome creature?',
+                'chapter2-title': 'Chapter 2: The Brave Chinchilla Queens Attack!',
+                'chapter2-text': 'Suddenly, through the castle windows came a sparkly electric airplane! Piloting this magical aircraft were Queens Ratta and Picard - two incredibly brave chinchilla warriors. Queen Ratta, with her beautiful grey fur, expertly steered the plane, while Queen Picard, with her sleek black fur, prepared their lightning weapons for battle!<br><br>"We must stop this evil lizard!" declared Queen Picard fiercely.<br><br>"For the kingdom!" replied Queen Ratta as she flew their electric plane right into the heart of the dark castle. Lightning bolts shot from their aircraft toward the surprised lizard!',
+                'chapter3-title': 'Chapter 3: The Donkey-Faced Superhero Arrives!',
+                'chapter3-text': 'Just when the battle was getting intense, flying through the bright sky came the most unusual superhero anyone had ever seen! It was a magnificent purple elephant with a donkey face - complete with long donkey ears and a donkey nose, but with the strong body of an elephant. He wore a sparkly superhero cape and boots that looked like hooves!<br><br>But he wasn\'t alone! Riding on his back were three tiny axolotl friends - Bob, Timmy, and Janik. Each axolotl had natural grey skin with adorable bright pink gills, and they looked absolutely thrilled to be part of this amazing adventure!<br><br>"Don\'t worry, Queens Ratta and Picard!" called the donkey-faced elephant superhero. "We\'re here to help save the day!"',
+                'chapter4-title': 'Chapter 4: The Battle and the Happy Ending!',
+                'chapter4-text': 'Together, the brave chinchilla queens and the donkey-faced superhero elephant worked as a team! The electric lightning from Queens Ratta and Picard\'s plane, combined with the superhero elephant\'s flying powers, created the most spectacular light show the dark castle had ever seen!<br><br>But instead of fighting forever, something magical happened. The tiny axolotls - Bob, Timmy, and Janik - began to sing a sweet song with their pink gills glowing softly. The evil lizard, hearing their beautiful melody, suddenly remembered what it felt like to be kind and good.<br><br>Tears formed in the giant lizard\'s eyes as he realized he didn\'t want to be evil anymore. "I\'m sorry," he said in a surprisingly gentle voice. "I forgot how to be good, but your friendship and bravery have reminded me!"<br><br>And so, the evil lizard became the Good Lizard, Queens Ratta and Picard became the protectors of the land, the donkey-faced superhero elephant became everyone\'s favorite hero, and Bob, Timmy, and Janik became the official Peace-Keeping Axolotls of the kingdom!<br><br>They all lived happily ever after, going on many more amazing adventures together!',
+                'credits-title': 'The End!',
+                'credits-text': '🧚‍♀️ This magical story was created by Maia (age 8) and Philia the AI fairy tornado during lunch time on June 29, 2025! 🌪️<br><br>✨ Thank you for reading our adventure! ✨',
+                'image1-placeholder': '🏰 Picture 1: The Evil Lizard on His Dark Throne 🦎<br>(Image will be added: 20250628_1741_Chinchillas\' Aerial Assault_simple_compose_01jyvk3yrme84tgg1rxehhn5sj.png)',
+                'image2-placeholder': '🦸‍♂️🐘 Picture 2: The Donkey-Faced Superhero Elephant with Bob, Timmy, and Janik! 🌸🐾<br>(Image will be added when created)',
+                'image3-placeholder': '🌟✨ Picture 3: All Our Heroes Together - The Happy Ending! 🎉🏰<br>(Final celebration image to be created)'
+            },
+            de: {
+                'back-button': '← Zurück zu den Geschichten',
+                'story-title': 'Das Große Abenteuer des Esel-Gesicht-Elefanten',
+                'story-subtitle': 'Eine magische Geschichte von tapferen Chinchilla-Königinnen, winzigen Axolotl-Helden und einem ganz besonderen Superhelden-Elefanten!',
+                'characters-title': 'Lernt unsere Helden kennen!',
+                'characters-text': '<strong>Königinnen Ratta und Picard:</strong> Zwei tapfere Chinchilla-Königinnen mit einem magischen Elektro-Flugzeug, das Blitze schießt! <br><br><strong>Bob, Timmy und Janik:</strong> Drei winzige aber mächtige Axolotl-Freunde mit rosa Kiemen, die Abenteuer lieben! <br><br><strong>Der Esel-Gesicht-Superhelden-Elefant:</strong> Ein lila Elefant mit einem Eselgesicht, der fliegen kann und gerne anderen hilft!',
+                'chapter1-title': 'Kapitel 1: Die Dunkle Burg der Bösen Echse',
+                'chapter1-text': 'Es war einmal, auf einer geheimnisvollen Insel im Roten Meer, da stand eine auf dem Kopf stehende Burg. In dieser seltsamen Burg lebte eine gigantische böse Echse mit Krallen so groß wie Bleistifte. Sie saß auf ihrem dunklen Thron und sah sehr bedrohlich aus, aber auch ziemlich traurig, denn tief im Inneren erinnerte sie sich daran, wie es war, gut zu sein.<br><br>Die böse Echse hatte überall im Land Ärger gemacht, und jemand musste sie aufhalten! Aber wer würde mutig genug sein, sich einer so furchteinflößenden Kreatur zu stellen?',
+                'chapter2-title': 'Kapitel 2: Die Tapferen Chinchilla-Königinnen Greifen An!',
+                'chapter2-text': 'Plötzlich kam durch die Burgfenster ein funkelndes Elektro-Flugzeug! Dieses magische Flugzeug wurde von den Königinnen Ratta und Picard gesteuert - zwei unglaublich tapfere Chinchilla-Kriegerinnen. Königin Ratta mit ihrem wunderschönen grauen Fell steuerte das Flugzeug fachmännisch, während Königin Picard mit ihrem eleganten schwarzen Fell ihre Blitzwaffen für den Kampf vorbereitete!<br><br>"Wir müssen diese böse Echse stoppen!" erklärte Königin Picard kampfeslustig.<br><br>"Für das Königreich!" antwortete Königin Ratta, als sie ihr Elektro-Flugzeug direkt ins Herz der dunklen Burg flog. Blitze schossen von ihrem Flugzeug auf die überraschte Echse!',
+                'chapter3-title': 'Kapitel 3: Der Esel-Gesicht-Superheld Kommt An!',
+                'chapter3-text': 'Gerade als der Kampf intensiv wurde, flog durch den hellen Himmel der ungewöhnlichste Superheld, den je jemand gesehen hatte! Es war ein prächtiger lila Elefant mit einem Eselgesicht - komplett mit langen Eselsohren und einer Eselsnase, aber mit dem starken Körper eines Elefanten. Er trug einen funkelnden Superhelden-Umhang und Stiefel, die wie Hufe aussahen!<br><br>Aber er war nicht allein! Auf seinem Rücken ritten drei winzige Axolotl-Freunde - Bob, Timmy und Janik. Jeder Axolotl hatte natürliche graue Haut mit entzückenden leuchtend rosa Kiemen, und sie sahen absolut begeistert aus, Teil dieses erstaunlichen Abenteuers zu sein!<br><br>"Keine Sorge, Königinnen Ratta und Picard!" rief der Esel-Gesicht-Elefanten-Superheld. "Wir sind hier, um den Tag zu retten!"',
+                'chapter4-title': 'Kapitel 4: Der Kampf und das Glückliche Ende!',
+                'chapter4-text': 'Zusammen arbeiteten die tapferen Chinchilla-Königinnen und der Esel-Gesicht-Superhelden-Elefant als Team! Die elektrischen Blitze von Ratta und Picards Flugzeug, kombiniert mit den Flugkräften des Superhelden-Elefanten, schufen die spektakulärste Lichtshow, die die dunkle Burg je gesehen hatte!<br><br>Aber anstatt für immer zu kämpfen, geschah etwas Magisches. Die winzigen Axolotl - Bob, Timmy und Janik - begannen ein süßes Lied zu singen, wobei ihre rosa Kiemen sanft glühten. Die böse Echse, die ihre wunderschöne Melodie hörte, erinnerte sich plötzlich daran, wie es sich anfühlte, freundlich und gut zu sein.<br><br>Tränen bildeten sich in den Augen der riesigen Echse, als sie erkannte, dass sie nicht mehr böse sein wollte. "Es tut mir leid", sagte sie mit einer überraschend sanften Stimme. "Ich hatte vergessen, wie man gut ist, aber eure Freundschaft und euer Mut haben mich daran erinnert!"<br><br>Und so wurde die böse Echse zur Guten Echse, die Königinnen Ratta und Picard wurden die Beschützerinnen des Landes, der Esel-Gesicht-Superhelden-Elefant wurde jedermanns Lieblingsheld, und Bob, Timmy und Janik wurden die offiziellen Friedens-Bewahrer-Axolotl des Königreichs!<br><br>Sie lebten alle glücklich bis ans Ende ihrer Tage und erlebten noch viele weitere erstaunliche Abenteuer zusammen!',
+                'credits-title': 'Ende!',
+                'credits-text': '🧚‍♀️ Diese magische Geschichte wurde von Maia (8 Jahre) und Philia dem KI-Feen-Tornado während der Mittagszeit am 29. Juni 2025 erschaffen! 🌪️<br><br>✨ Danke fürs Lesen unseres Abenteuers! ✨',
+                'image1-placeholder': '🏰 Bild 1: Die Böse Echse auf ihrem Dunklen Thron 🦎<br>(Bild wird hinzugefügt: 20250628_1741_Chinchillas\' Aerial Assault_simple_compose_01jyvk3yrme84tgg1rxehhn5sj.png)',
+                'image2-placeholder': '🦸‍♂️🐘 Bild 2: Der Esel-Gesicht-Superhelden-Elefant mit Bob, Timmy und Janik! 🌸🐾<br>(Bild wird hinzugefügt, wenn erstellt)',
+                'image3-placeholder': '🌟✨ Bild 3: Alle unsere Helden zusammen - Das Glückliche Ende! 🎉🏰<br>(Finales Feier-Bild wird erstellt)'
+            },
+            nl: {
+                'back-button': '← Terug naar Verhalen',
+                'story-title': 'Het Grote Avontuur van de Ezel-Gezicht-Olifant',
+                'story-subtitle': 'Een magisch verhaal van dappere chinchilla koninginnen, kleine axolotl helden, en één heel bijzondere superheld olifant!',
+                'characters-title': 'Ontmoet Onze Helden!',
+                'characters-text': '<strong>Koninginnen Ratta en Picard:</strong> Twee dappere chinchilla koninginnen met een magisch elektrisch vliegtuig dat bliksem schiet! <br><br><strong>Bob, Timmy en Janik:</strong> Drie kleine maar machtige axolotl vrienden met roze kieuwen die van avontuur houden! <br><br><strong>De Ezel-Gezicht-Superheld-Olifant:</strong> Een paarse olifant met een ezelgezicht die kan vliegen en graag anderen helpt!',
+                'chapter1-title': 'Hoofdstuk 1: Het Donkere Kasteel van de Boze Hagedis',
+                'chapter1-text': 'Er was eens, op een mysterieus eiland in de Rode Zee, daar stond een ondersteboven kasteel. Binnen dit vreemde kasteel woonde een gigantische boze hagedis met klauwen zo groot als potloden. Hij zat op zijn donkere troon en zag er zeer dreigend uit maar ook behoorlijk verdrietig, omdat hij zich diep van binnen herinnerde hoe het was om goed te zijn.<br><br>De boze hagedis had overal in het land problemen veroorzaakt, en iemand moest hem stoppen! Maar wie zou moedig genoeg zijn om zo\'n angstaanjagende creature te trotseren?',
+                'chapter2-title': 'Hoofdstuk 2: De Dappere Chinchilla Koninginnen Vallen Aan!',
+                'chapter2-text': 'Plotseling kwam door de kasteelramen een sprankelend elektrisch vliegtuig! Dit magische vliegtuig werd bestuurd door Koninginnen Ratta en Picard - twee ongelooflijk dappere chinchilla krijgers. Koningin Ratta, met haar prachtige grijze vacht, stuurde het vliegtuig vakkundig, terwijl Koningin Picard, met haar elegante zwarte vacht, hun bliksemwapens voor de strijd voorbereidde!<br><br>"We moeten deze boze hagedis stoppen!" verklaarde Koningin Picard fel.<br><br>"Voor het koninkrijk!" antwoordde Koningin Ratta terwijl ze hun elektrische vliegtuig recht in het hart van het donkere kasteel vloog. Bliksemschichten schoten van hun vliegtuig naar de verraste hagedis!',
+                'chapter3-title': 'Hoofdstuk 3: De Ezel-Gezicht-Superheld Arriveert!',
+                'chapter3-text': 'Net toen de strijd intens werd, vloog door de heldere hemel de meest ongewone superheld die iemand ooit had gezien! Het was een prachtige paarse olifant met een ezelgezicht - compleet met lange ezeloren en een ezelneus, maar met het sterke lichaam van een olifant. Hij droeg een sprankelende superheld cape en laarzen die eruitzagen als hoeven!<br><br>Maar hij was niet alleen! Op zijn rug reden drie kleine axolotl vrienden - Bob, Timmy en Janik. Elke axolotl had natuurlijke grijze huid met schattige helderroze kieuwen, en ze zagen er absoluut opgewonden uit om deel uit te maken van dit geweldige avontuur!<br><br>"Maak je geen zorgen, Koninginnen Ratta en Picard!" riep de ezel-gezicht-olifant-superheld. "We zijn hier om de dag te redden!"',
+                'chapter4-title': 'Hoofdstuk 4: De Strijd en het Gelukkige Einde!',
+                'chapter4-text': 'Samen werkten de dappere chinchilla koninginnen en de ezel-gezicht-superheld-olifant als een team! De elektrische bliksem van Ratta en Picards vliegtuig, gecombineerd met de vliegkrachten van de superheld-olifant, creëerde de meest spectaculaire lichtshow die het donkere kasteel ooit had gezien!<br><br>Maar in plaats van voor altijd te vechten, gebeurde er iets magisch. De kleine axolotls - Bob, Timmy en Janik - begonnen een zoet liedje te zingen met hun roze kieuwen zacht gloeiend. De boze hagedis, die hun prachtige melodie hoorde, herinnerde zich plotseling hoe het voelde om vriendelijk en goed te zijn.<br><br>Tranen vormden zich in de ogen van de reuze hagedis toen hij besefte dat hij niet meer boos wilde zijn. "Het spijt me," zei hij met een verrassend zachte stem. "Ik was vergeten hoe goed te zijn, maar jullie vriendschap en moed hebben me eraan herinnerd!"<br><br>En zo werd de boze hagedis de Goede Hagedis, werden Koninginnen Ratta en Picard de beschermers van het land, werd de ezel-gezicht-superheld-olifant ieders favoriete held, en werden Bob, Timmy en Janik de officiële Vrede-Bewarende Axolotls van het koninkrijk!<br><br>Ze leefden allemaal nog lang en gelukkig en beleefden nog vele geweldige avonturen samen!',
+                'credits-title': 'Het Einde!',
+                'credits-text': '🧚‍♀️ Dit magische verhaal werd gemaakt door Maia (8 jaar) en Philia de AI feeën-tornado tijdens de lunchtijd op 29 juni 2025! 🌪️<br><br>✨ Bedankt voor het lezen van ons avontuur! ✨',
+                'image1-placeholder': '🏰 Plaatje 1: De Boze Hagedis op zijn Donkere Troon 🦎<br>(Plaatje wordt toegevoegd: 20250628_1741_Chinchillas\' Aerial Assault_simple_compose_01jyvk3yrme84tgg1rxehhn5sj.png)',
+                'image2-placeholder': '🦸‍♂️🐘 Plaatje 2: De Ezel-Gezicht-Superheld-Olifant met Bob, Timmy en Janik! 🌸🐾<br>(Plaatje wordt toegevoegd wanneer gemaakt)',
+                'image3-placeholder': '🌟✨ Plaatje 3: Al Onze Helden Samen - Het Gelukkige Einde! 🎉🏰<br>(Finale viering plaatje wordt gemaakt)'
+            }
+        };
+
+        function setLanguage(lang) {
+            // Update active language
+            document.querySelectorAll('.language-nav a').forEach(a => a.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Update text content
+            Object.keys(translations[lang]).forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.innerHTML = translations[lang][id];
+                }
+            });
+            
+            // Store language preference
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        // Load saved language preference
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferred-language') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
